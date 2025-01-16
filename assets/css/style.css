@@ -168,7 +168,6 @@ nav ul li:hover ul.servDropdown{
     padding: 1.5rem 3rem;
     margin: 0;
     font-family: inherit;
-    font-size: inherit;
     position: relative;
     display: inline-block;
   }
@@ -250,7 +249,6 @@ nav ul li:hover ul.servDropdown{
     padding: 1.5rem 3rem;
     margin: 0;
     font-family: inherit;
-    font-size: inherit;
     position: relative;
     display: inline-block;
   }
