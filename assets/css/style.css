@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+p{
+    font-size: 15px;
+}
+.splide__slide > .text-con > .text-1{
+    transform: translateY(50%);
+    transition: 1s;
+}
+.splide__slide.is-active > .text-con > .text-1{
+    transform: translateY(0%);
+    transition: 1s;
+}
+.splide__slide > .text-con > div > .btn-1{
+    position: relative;
+    right:100px;
+    transition: 2s;
+}
+.splide__slide.is-active > .text-con > div > .btn-1{
+    position: relative;
+    right:0px;
+    transition: 2s;
+}
+.splide__slide > .text-con > div > .btn-2{
+    position: relative;
+    left:100px;
+    transition: 2s;
+}
+.splide__slide.is-active > .text-con > div > .btn-2{
+    position: relative;
+    left:0px;
+    transition: 1.5s;
+}
+/* .btn-1{
+    border: 3px solid;
+    position: relative;
+    right:20px
+} */
+.splide__slide > div > .bannerImg{
+    transform: scale(1);
+    transition: 10s;
+}
+.splide__slide.is-active > div > .bannerImg{
+    transform: scale(1.1);
+    transition: 10s;
+}
+
+.splide__slide.is-active > div > .textNo span{
+    background-color: #1a191d !important;
+    color: #FFF;
+}
+.splide__slide.splide__slide.is-active > div > .serText{
+    opacity: 1;
+}
+
+.banner-arrows{
+    position: absolute;
+    top: 85%;
+    left: 80%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-18%, -50%);
+    width: 132px;
+    height: 60px;
+    z-index: 999;
+}
+.banner-arrow{
+    background: transparent;
+    width: 3em;
+    height: 3em;
+    opacity: 1;
+    border: 1px solid #FFF;
+    border-radius: 0;
+    align-items: baseline;
+}
+.banner-arrow svg{
+    fill: #FFF;
+    width: 40px;
+    height: 55px;
+}
+.banner-arrow-prev svg{
+    margin-right: 10px;
+}
+.banner-arrow-next svg{
+    margin-left: 10px;
+}
+
+@media (max-width: 767px){
+    .banner-arrows{
+        top: auto;
+        left: auto;
+        right: 8%;
+        bottom: 25px;
+        transform: translate(22%, -50%);
+    }
+}
+
+
+@media (min-width:1279px){
+    .overlay{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: -webkit-linear-gradient(top, #cd0001 25%, #810001 100%);
+        -webkit-transition: all 200ms linear 0s;
+        -khtml-transition: all 200ms linear 0s;
+        -moz-transition: all 200ms linear 0s;
+        -ms-transition: all 200ms linear 0s;
+        -o-transition: all 200ms linear 0s;
+        transition: all 200ms linear 0s;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .cds{
+        height: 400px;
+    }
+    .cds:hover .overlay{
+        opacity: 1;
+        visibility: visible;
+        top: -24px;
+        bottom: -24px;
+    }
+    
+    .cds .overlay .service-card-btn{
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+        transition: all 250ms linear 0s;
+    }
+    
+    .cds:hover .serviceSVG svg{
+        fill: #fff !important;
+    }
+    .cds:hover .serviceSVG.svg3 svg path{
+        fill: #fff !important;
+    }
+    
+    .cds:hover .serviceText h3, .cds:hover .serviceText p{
+        color: white;
+    }
+}
+
+nav ul li ul.servDropdown{
+    display: none;
+}
+nav ul li:hover ul.servDropdown{
+    display: block;
+}
+
+
+/* button */
+
+  
+  .button {
+    pointer-events: auto;
+    cursor: pointer;
+    background: #e7e7e7;
+    border: none;
+    padding: 1.5rem 3rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .button::before,
+  .button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .button--hyperion {
+    font-family: input-mono-narrow, monospace;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    border: 1px solid #000;
+    overflow: hidden;
+    color: #fff;
+  }
+  
+  .button--hyperion span {
+    display: block;
+    position: relative;
+  }
+  
+  .button--hyperion > span {
+    overflow: hidden;
+  }
+  
+  .button--hyperion > span > span {
+    overflow: hidden;
+    mix-blend-mode: difference;
+  }
+  
+  .button--hyperion:hover > span > span {
+    animation:
+      MoveUpInitial 0.2s forwards,
+      MoveUpEnd 0.2s forwards 0.2s;
+  }
+  
+  @keyframes MoveUpInitial {
+    to {
+      transform: translate3d(0, -105%, 0);
+    }
+  }
+  
+  @keyframes MoveUpEnd {
+    from {
+      transform: translate3d(0, 100%, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .button--hyperion::before {
+    content: "";
+    background: #000;
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+    transform-origin: 100% 50%;
+  }
+  
+  .button--hyperion:hover::before {
+    transform: scale3d(0, 1, 1);
+    transform-origin: 0% 50%;
+  }
+
+
+/* button */
+
+  
+  .button2 {
+    pointer-events: auto;
+    cursor: pointer;
+    background: #000000;
+    border: none;
+    padding: 1.5rem 3rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .button2::before,
+  .button2::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .button2--hyperion {
+    font-family: input-mono-narrow, monospace;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    border: 1px solid #000000;
+    overflow: hidden;
+    color: #000000;
+  }
+  
+  .button2--hyperion span {
+    display: block;
+    position: relative;
+  }
+  
+  .button2--hyperion > span {
+    overflow: hidden;
+  }
+  
+  .button2--hyperion > span > span {
+    overflow: hidden;
+    mix-blend-mode: difference;
+  }
+  
+  .button2--hyperion:hover > span > span {
+    animation:
+      MoveUpInitial 0.2s forwards,
+      MoveUpEnd 0.2s forwards 0.2s;
+  }
+  
+  @keyframes MoveUpInitial {
+    to {
+      transform: translate3d(0, -105%, 0);
+    }
+  }
+  
+  @keyframes MoveUpEnd {
+    from {
+      transform: translate3d(0, 100%, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .button2--hyperion::before {
+    content: "";
+    background: #ffffff;
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+    transform-origin: 100% 50%;
+  }
+  
+  .button2--hyperion:hover::before {
+    transform: scale3d(0, 1, 1);
+    transform-origin: 0% 50%;
+  }

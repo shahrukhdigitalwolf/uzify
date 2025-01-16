@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzify - home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+    " rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header class="fixed top-0 left-0 w-full z-[999] bg-[#00000052]">
+        <div class="bg-[#000] py-2 border-b border-[#2d2525]">
+            <div class="flex justify-center md:justify-between items-center px-3 container mx-auto">
+                <p class="text-white font-semibold hidden md:block"> We are the industrial company you need</p>
+                <div class="flex justify-center gap-x-8 items-center">
+                    <div class="flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#FFFFFF"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+                        <a class="text-white text-[14px] md:text-[16px]" href="mailto:info@uzify.in">info@uzify.in</a>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#FFFFFF"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>
+                        <a class="text-white text-[14px] md:text-[16px]" href="tel:+919883707070">+91 98837 07070</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-between items-center container mx-auto py-1 lg:py-3 px-3 lg:backdrop-blur-[5px]">
+            <div>
+                <svg id="logo-16" width="80" height="43" viewBox="0 0 109 43" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M64.9315 11.4284C62.1883 8.6852 58.9316 6.5091 55.3475 5.0245C51.7633 3.5399 47.9219 2.7758 44.0424 2.7758C40.1629 2.7758 36.3215 3.5399 32.7373 5.0245C29.1532 6.5091 25.8965 8.6852 23.1533 11.4284L44.0424 32.3174L64.9315 11.4284Z" class="ccompli1" fill="#FFD200"></path> <path d="M44.0686 32.3475C46.8118 35.0907 50.0684 37.2667 53.6526 38.7513C57.2367 40.2359 61.0782 41 64.9577 41C68.837 41 72.679 40.2359 76.263 38.7513C79.847 37.2667 83.104 35.0907 85.847 32.3475L64.9577 11.4584L44.0686 32.3475Z" class="ccompli2" fill="#06E07F"></path> <path d="M44.017 32.3429C41.2738 35.0861 38.0171 37.2621 34.433 38.7467C30.8488 40.2313 27.0074 40.9954 23.1279 40.9954C19.2484 40.9954 15.407 40.2313 11.8228 38.7467C8.2387 37.2621 4.982 35.0861 2.2388 32.3429L23.1279 11.4538L44.017 32.3429Z" class="ccustom" fill="#E3073C"></path> <path d="M64.9831 11.433C67.726 8.6898 70.983 6.5138 74.567 5.0292C78.151 3.5446 81.993 2.7805 85.872 2.7805C89.752 2.7805 93.593 3.5446 97.177 5.0292C100.761 6.5138 104.018 8.6898 106.761 11.433L85.872 32.3221L64.9831 11.433Z" class="ccustom" fill="#1F84EF"></path> </svg>
+            </div>
+            <button id="openNav">
+                <svg class="w-6 h-6 text-white dark:text-white lg:hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+                </svg>                  
+            </button>
+            <nav id="navbar" class="grow lg:block absolute top-0 right-0 max-w-full w-[350px] bg-[#000000c4] backdrop-blur-[5px] lg:backdrop-blur-[0] lg:w-[100%] lg:block lg:bg-transparent lg:top-auto lg:translate-x-[0%] translate-x-[100%] transition-all duration-[.8s] ease">
+                <div class="pt-3 pe-3 lg:hidden mb-8">
+                    <button id="closeNav" class="ms-auto block bg-[#494949] p-2 rounded">
+                        <svg class="w-6 h-6 text-gray-200 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/>
+                          </svg>                          
+                    </button>
+                </div>
+                <ul class="lg:flex items-center justify-center block h-screen lg:h-auto">
+                    <li class="mb-3 lg:mb-0">
+                        <a class="py-4 px-4 text-white" href="#">Home</a>
+                    </li>
+                    <li class="relative mb-3 lg:mb-0">
+                        <button type="button" class="flex items-center justify-between w-full gap-x-1 text-[#FFF] ps-4 pe-3 lg:py-[18px] dropdown-button">
+                            <span>Services</span>
+                            <svg class="w-6 h-6 text-white dark:text-white dropdown-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 10 4 4 4-4"/>
+                            </svg>                              
+                        </button>
+                        <ul id="dropdown" class="dropdown-menu servDropdown relative lg:absolute lg:top-[60px] bg-transparent lg:bg-[#000000b8] lg:w-[270px] lg:rounded-b px-3 lg:px-0 lg:max-h-[500px] max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+                            <li class="border-b border-slate-500">
+                                <a class="text-white block p-[12px_0px_12px_20px] hover:text-slate-200" href="contract-services-civil-construction-site.html">Contract service for Civil Construction Sites</a>
+                            </li>
+                            <li class="border-b border-slate-500">
+                                <a class="text-white block p-[12px_0px_12px_20px] hover:text-slate-200" href="mechanical-infrastructure.html">Mechanical Infrastructure</a>
+                            </li>
+                            <li class="border-b border-slate-500">
+                                <a class="text-white block p-[12px_0px_12px_20px] hover:text-slate-200" href="warehouse-development.html">Warehouse Development</a>
+                            </li>
+                            <li class="">
+                                <a class="text-white block p-[12px_0px_12px_20px] hover:text-slate-200" href="residential-development.html">Residential Development</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mb-3 lg:mb-0">
+                        <a class="py-4 px-4 text-white" href="about.html">About Us</a>
+                    </li>
+                    <li class="mb-3 lg:mb-0">
+                        <a class="py-4 px-4 text-white" href="projects.html">Our Projects</a>
+                    </li>
+                    <li class="mb-3 lg:mb-0">
+                        <a class="py-4 px-4 text-white" href="blog.html">Blogs</a>
+                    </li>
+                    <li class="mb-3 lg:mb-0">
+                        <a class="py-4 px-4 text-white" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="banner" class="splide" aria-label="home banner">
+            <div class="splide__track">
+                  <ul class="splide__list">
+                      <li class="splide__slide relative overflow-hidden">
+                            <div class="relative z-[1] before:content-[''] before:bg-[#000000ad] before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-[2]">
+                                <img class="bannerImg hidden lg:block" src="./assets/img/banner/b1.webp" alt="">
+                                <img class="bannerImg lg:hidden block" src="./assets/img/banner/mob-1.webp" alt="">
+                            </div>
+                            <div class="absolute top-[50%] left-[50%] z-[3] px-3 w-full text-center text-con" style="transform: translate(-50%,-50%);">
+                                <p class="text-white text-[23px] lg:text-[50px] font-bold text-1">Future Of Infrastructure</p>
+                                <p class="text-white text-[15px] lg:text-[20px] pb-8 text-1 max-w-full w-[300px] md:w-[800px] mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cumque illo veniam ut nam.</p>
+                                <div class="flex justify-center items-center gap-x-8"> 
+                                    <button class="button button--hyperion my-8 py-0 px-0 btn-1 hover:text-black">
+                                        <a class="block w-full px-14 py-3" href="projects.html">
+                                            <span class="font-[400]">Our Project</span>
+                                        </a>
+                                    </button>
+                                    <button class="button2 button2--hyperion my-8 py-0 px-0 btn-2 hover:text-white">
+                                        <a class="block w-full px-14 py-3" href="contact.html">
+                                            <span class="font-[400]">Contact Us</span>
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                      </li>
+                      <li class="splide__slide relative overflow-hidden">
+                            <div class="relative z-[1] before:content-[''] before:bg-[#000000ad] before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-[2]">
+                                <img class="bannerImg hidden lg:block" src="./assets/img/banner/b2.webp" alt="">   
+                                <img class="bannerImg lg:hidden block" src="./assets/img/banner/mob-2.webp" alt="">   
+                            </div>
+                            <div class="absolute top-[50%] left-[50%] z-[3] px-3 w-full text-center text-con" style="transform: translate(-50%,-50%);">
+                                <p class="text-white text-[23px] lg:text-[50px] font-bold text-1 leading-tight">Shaping The Future of<br/>
+                                    Industrial Landscapes</p>
+                                <p class="text-white text-[15px] lg:text-[20px] pb-8 text-1 max-w-full w-[300px] md:w-[800px] mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cumque illo veniam ut nam.</p>
+                                <div class="flex justify-center items-center gap-x-8"> 
+                                    <button class="button button--hyperion my-8 py-0 px-0 btn-1 hover:text-black">
+                                        <a class="block w-full px-14 py-3" href="projects.html">
+                                            <span class="font-[400]">Our Project</span>
+                                        </a>
+                                    </button>
+                                    <button class="button2 button2--hyperion my-8 py-0 px-0 btn-2 hover:text-white">
+                                        <a class="block w-full px-14 py-3" href="contact.html">
+                                            <span class="font-[400]">Contact Us</span>
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                      </li>
+                      <li class="splide__slide relative overflow-hidden">
+                            <div class="relative z-[1] before:content-[''] before:bg-[#000000ad] before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-[2]">
+                                <img class="bannerImg hidden lg:block" src="./assets/img/banner/b3.webp" alt="">  
+                                <img class="bannerImg lg:hidden block" src="./assets/img/banner/mob-3.webp" alt="">  
+                            </div>
+                            <div class="absolute top-[50%] left-[50%] z-[3] px-3 w-full text-center text-con" style="transform: translate(-50%,-50%);">
+                                <p class="text-white text-[23px] lg:text-[50px] font-bold text-1 leading-tight">Shaping The Future of<br/>
+                                    Industrial Landscapes</p>
+                                <p class="text-white text-[15px] lg:text-[20px] pb-8 text-1 max-w-full w-[300px] md:w-[800px] mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cumque illo veniam ut nam.</p>
+                                <div class="flex justify-center items-center gap-x-8"> 
+                                    <button class="button button--hyperion my-8 py-0 px-0 btn-1 hover:text-black">
+                                        <a class="block w-full px-14 py-3" href="projects.html">
+                                            <span class="font-[400]">Our Project</span>
+                                        </a>
+                                    </button>
+                                    <button class="button2 button2--hyperion my-8 py-0 px-0 btn-2 hover:text-white">
+                                        <a class="block w-full px-14 py-3" href="contact.html">
+                                            <span class="font-[400]">Contact Us</span>
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                      </li>
+                      <li class="splide__slide relative overflow-hidden">
+                            <div class="relative z-[1] before:content-[''] before:bg-[#000000ad] before:w-full before:h-full before:absolute before:top-0 before:left-0 before:z-[2]">
+                                <img class="bannerImg hidden lg:block" src="./assets/img/banner/b4.webp" alt="">
+                                <img class="bannerImg lg:hidden block" src="./assets/img/banner/mob-4.webp" alt="">
+                            </div>
+                            <div class="absolute top-[50%] left-[50%] z-[3] px-3 w-full text-center text-con" style="transform: translate(-50%,-50%);">
+                                <p class="text-white text-[23px] lg:text-[50px] font-bold text-1 leading-tight">Shaping The Future of<br/>
+                                    Industrial Landscapes</p>
+                                <p class="text-white text-[15px] lg:text-[20px] pb-8 text-1 max-w-full w-[300px] md:w-[800px] mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cumque illo veniam ut nam.</p>
+                                <div class="flex justify-center items-center gap-x-8"> 
+                                    <button class="button button--hyperion my-8 py-0 px-0 btn-1 hover:text-black">
+                                        <a class="block w-full px-14 py-3" href="projects.html">
+                                            <span class="font-[400]">Our Project</span>
+                                        </a>
+                                    </button>
+                                    <button class="button2 button2--hyperion my-8 py-0 px-0 btn-2 hover:text-white">
+                                        <a class="block w-full px-14 py-3" href="contact.html">
+                                            <span class="font-[400]">Contact Us</span>
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                      </li>
+                  </ul>
+            </div>
+          </section>
+          <section class="-mt-[50px] relative z-2">
+                <div class="container mx-auto px-3">
+                    <div class="flex flex-wrap shadow-lg gap-y-[5px]">
+                        <div class="w-full md:w-[50%] lg:w-[50%] xl:w-[25%] border-b border-slate-300">
+                            <div class="relative bg-[#fff] px-10 py-5 flex justify-evenly flex-col text-center transition-all duration-300 pb-[40px] lg:border-r border-slate-300 cds">
+                                <div class="serviceSVG svg1 z-[1] relative">
+                                    <svg class="text-gray-800 dark:text-white mx-auto" xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 64 64"><g id="Layer_65" data-name="Layer 65"><path d="M60,11H27.08V4a1,1,0,0,0-1-1h-9.5a1,1,0,0,0-1,1v7h-1.5V7.63a1,1,0,0,0-1-1H6.92a1,1,0,0,0-1,1V11H4a1,1,0,0,0-1,1v6.58a1,1,0,0,0,1,1H15.58V59H4a1,1,0,0,0,0,2H32a1,1,0,0,0,0-2H27.08V19.58h18.7V33.44L35.89,41.8a1,1,0,0,0,.64,1.76h2.25V53.73a1,1,0,0,0,1,1h14a1,1,0,0,0,1-1V43.56H57a1,1,0,0,0,.65-1.76l-4.4-3.72V34.89a1,1,0,0,0-2,0v1.5l-3.5-3V19.58H60a1,1,0,0,0,1-1V12A1,1,0,0,0,60,11ZM52.78,52.73h-12V43.56h12Zm-6-35.15H45.35l1.37-1,1.38,1ZM53.64,13H56.4L55,14Zm-.28,2.29-2.49,1.88-2.49-1.88,2.49-1.88ZM46.72,14l-1.37-1H48.1Zm-1.66,1.25-2.49,1.89-2.5-1.89,2.5-1.88ZM38.41,14,37,13h2.76Zm-1.66,1.25-2.49,1.88-2.49-1.88,2.49-1.88ZM30.12,14l-1.38-1h2.75Zm-1.66,1.25-1.38,1V14.25Zm-5.64-7.2,2.26-2v4.09ZM23.06,11H19.61l1.72-1.56ZM21.33,6.75,19.4,5h3.87ZM19.84,8.09l-2.26,2.05V6.05ZM17.58,13h7.5v4.58h-7.5Zm7.5,28.4-2.2-1.86,2.2-1.86Zm0-7.64-2.2-1.86L25.08,30Zm-.78,2-3,2.51-3-2.51,3-2.51Zm-6.72,2,2.2,1.86-2.2,1.86Zm0-3.92V30l2.2,1.86Zm0,11.58,2.2,1.86-2.2,1.86Zm.77-2,3-2.52,3,2.52-3,2.52Zm6.73,2v3.72l-2.2-1.86ZM21.33,30.59l-3-2.52,3-2.52,3,2.52ZM17.58,26.1V22.38l2.2,1.86Zm0,26.88,2.2,1.86-2.2,1.86Zm.78-2,3-2.51,3,2.51-3,2.51Zm6.72,2V56.7l-2.2-1.86Zm0-26.88-2.2-1.86,2.2-1.86Zm-3.75-3.17-3.75-3.16v-.19h7.5v.19Zm0,33.22L24.71,59H18Zm8.79-39.6,1.37,1H28.74Zm8.29,0,1.38,1H37Zm16.61,0,1.38,1H53.64Zm1.66-1.25L59,13.54V17ZM5,13h.92v4.58H5Zm9.08,4.58V13h1.5v4.58Z"></path><path d="M37.17,59H35.5a1,1,0,0,0,0,2h1.67A1,1,0,0,0,37.17,59Z"></path></g></svg>    
+                                </div>
+                                <div class="relative z-[1] serviceText">
+                                    <h3 class="text-[20px]  leading-tight py-4">
+                                        <a class="font-semibold" href="contract-services-civil-construction-site.html">
+                                            Contract service for<br/> Civil Construction Sites
+                                        </a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem eius illum sequi deleniti natus, libero nemo,</p>
+                                </div>                             
+                                <div class="overlay pt-[25px]">
+                                    <div class="service-card-btn">
+                                        <a class="bg-[#1a191d] text-white px-8 py-2 font-semibold rounded" href="contract-services-civil-construction-site.html">Know More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-[50%] lg:w-[50%] xl:w-[25%] border-b border-slate-300">
+                            <div class="relative bg-[#fff] px-10 py-5 flex justify-evenly flex-col text-center transition-all duration-300 pb-[40px] lg:border-r border-slate-300 cds">
+                                <div class="serviceSVG svg2 z-[1] relative">
+                                    <svg class="text-gray-800 dark:text-white mx-auto" width="80" height="80" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 1707 1707" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Layer_x0020_1">
+                                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                            <path class="fil0" d="M1174 1661l0 -111 -641 0 0 111 641 0zm-687 0l0 -581c-149,12 -268,137 -268,290l0 291 112 0 0 -219c0,-30 46,-30 46,0l0 219 110 0zm23 -627l136 0 46 -78c-68,-51 -113,-132 -113,-223l0 -122c-28,-72 -47,-141 -54,-206 -21,0 -54,6 -54,-22 0,-214 173,-383 382,-383 210,0 383,170 383,383 0,27 -31,22 -50,22 -6,65 -23,134 -52,206l0 122c0,93 -46,176 -117,226l43 75 136 0c186,0 337,151 337,336l0 314c0,12 -10,23 -23,23l-1314 0c-12,0 -22,-11 -22,-23l0 -314c0,-185 150,-336 336,-336zm23 45l0 268 641 0 0 -268 -104 0c-6,115 -101,206 -217,206 -116,0 -211,-91 -216,-206l-104 0zm686 1l0 581 111 0 0 -219c0,-30 45,-30 45,0l0 219 112 0 0 -291c0,-153 -118,-278 -268,-290zm-537 -17c-3,96 75,177 171,177 95,0 172,-77 172,-172 0,-2 0,-3 0,-5l-47 -81c-78,39 -170,37 -248,-2l-48 83zm-57 -456l0 126c0,174 189,292 350,199 68,-39 114,-115 114,-199l0 -129c7,-84 -4,-151 -34,-199l-403 0c-27,50 -33,112 -27,200l0 2zm482 -202c10,22 17,45 22,71 6,-24 9,-48 12,-71l-34 0zm-524 67c4,-25 10,-47 18,-67l-30 0c2,22 6,44 12,67zm-66 -112l314 0 0 -314c-48,3 -94,17 -134,38l0 188c0,30 -45,30 -45,0l0 -159c-77,57 -128,146 -135,247zm359 0l314 0c-7,-101 -58,-190 -135,-247l0 159c0,30 -45,30 -45,0l0 -188c-41,-21 -86,-35 -134,-38l0 314zm-343 1033l0 111 641 0 0 -111 -641 0z"></path>
+                                        </g>
+                                    </svg>
+                                    <!-- <svg class="text-gray-800 dark:text-white mx-auto" width="90" height="90" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><title>Roller</title><path d="M36,61H28a1,1,0,0,1-1-1V44a1,1,0,0,1,1-1h8a1,1,0,0,1,1,1V60A1,1,0,0,1,36,61Zm-7-2h6V45H29Z"></path><path d="M36,45H28a1,1,0,0,1-.95-.68l-2-6a1,1,0,0,1,.14-.9A1,1,0,0,1,26,37H38a1,1,0,0,1,.81.42,1,1,0,0,1,.14.9l-2,6A1,1,0,0,1,36,45Zm-7.28-2h6.56l1.33-4H27.39Z"></path><path d="M50,15H44a1,1,0,0,1,0-2h6a1,1,0,0,1,0,2Z"></path><path d="M32,39a1,1,0,0,1-1-1V32a1,1,0,0,1,2,0v6A1,1,0,0,1,32,39Z"></path><path d="M50,25a1,1,0,0,1-1-1V14a1,1,0,0,1,2,0V24A1,1,0,0,1,50,25Z"></path><path d="M32,33a1,1,0,0,1-.41-1.91l18-8a1,1,0,0,1,.82,1.82l-18,8A1,1,0,0,1,32,33Z"></path><path d="M8,17H4a1,1,0,0,1-1-1V12a1,1,0,0,1,1-1H8a1,1,0,0,1,1,1v4A1,1,0,0,1,8,17ZM5,15H7V13H5Z"></path><rect x="7" y="8" width="38" height="12" rx="3" ry="3"></rect><rect x="9" y="10" width="34" height="8" rx="1" ry="1"></rect></svg>   -->
+                                </div>
+                                <div class="relative z-[1] serviceText">
+                                    <h3 class="text-[20px] font-semibold leading-tight py-4">
+                                        <a class="font-semibold" href="#">
+                                            Mechanical Infrastructure
+                                        </a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem eius illum sequi deleniti natus, libero nemo,</p>
+                                </div>                             
+                                <div class="overlay pt-[25px]">
+                                    <div class="service-card-btn">
+                                        <a class="bg-[#1a191d] text-white px-8 py-2 font-semibold rounded" href="mechanical-infrastructure.html">Know More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-[50%] lg:w-[50%] xl:w-[25%] border-b border-slate-300">
+                            <div class="relative bg-[#fff] px-10 py-5 flex justify-evenly flex-col text-center transition-all duration-300 pb-[40px] lg:border-r border-slate-300 cds">
+                                <div class="serviceSVG svg3 z-[1] relative">
+                                    <svg class="text-gray-800 dark:text-white mx-auto" width="90" height="90" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M88.38 32.2896L51.38 5.28964C51.1222 5.09959 50.8103 4.99707 50.49 4.99707C50.1697 4.99707 49.8579 5.09959 49.6 5.28964L13.6 32.2896C13.4137 32.4294 13.2625 32.6105 13.1584 32.8188C13.0543 33.0271 13 33.2568 13 33.4896V85.4896C12.9987 85.6875 13.0365 85.8836 13.1113 86.0667C13.1861 86.2499 13.2964 86.4164 13.4358 86.5568C13.5752 86.6971 13.741 86.8085 13.9237 86.8845C14.1063 86.9605 14.3022 86.9996 14.5 86.9996H87.5C87.8979 86.9996 88.2794 86.8416 88.5607 86.5603C88.842 86.279 89 85.8975 89 85.4996V33.4996C88.9993 33.2634 88.9427 33.0306 88.835 32.8204C88.7273 32.6101 88.5714 32.4282 88.38 32.2896ZM75 64.9996H59V49.9996H75V64.9996ZM56 83.9996H41V67.9996H56V83.9996ZM59 67.9996H75V83.9996H59V67.9996ZM75 46.9996H57.5C57.1022 46.9996 56.7207 47.1577 56.4394 47.439C56.1581 47.7203 56 48.1018 56 48.4996V64.9996H39.5C39.1022 64.9996 38.7207 65.1577 38.4394 65.439C38.1581 65.7203 38 66.1018 38 66.4996V83.9996H28V39.9996H75V46.9996ZM86 83.9996H78V38.4996C78 38.1018 77.842 37.7203 77.5607 37.439C77.2794 37.1577 76.8979 36.9996 76.5 36.9996H26.5C26.1022 36.9996 25.7207 37.1577 25.4394 37.439C25.1581 37.7203 25 38.1018 25 38.4996V83.9996H16V34.2496L50.51 8.36964L86 34.2596V83.9996Z" fill="black" stroke-width="2.2"></path>
+                                    </svg>       
+                                </div>
+                                <div class="relative z-[1] serviceText">
+                                    <h3 class="text-[20px] font-semibold leading-tight py-4">
+                                        <a class="font-semibold" href="contract-services-civil-construction-site.html">
+                                            Warehouse Development
+                                        </a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem eius illum sequi deleniti natus, libero nemo,</p>
+                                </div>                             
+                                <div class="overlay pt-[25px]">
+                                    <div class="service-card-btn">
+                                        <a class="bg-[#1a191d] text-white px-8 py-2 font-semibold rounded" href="warehouse-development.html">Know More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-[50%] lg:w-[50%] xl:w-[25%] border-b border-slate-300">
+                            <div class="relative bg-[#fff] px-10 py-5 flex justify-evenly flex-col text-center pb-[40px] transition-all duration-300 cds">
+                                <div class="serviceSVG svg4 z-[1] relative">
+                                    <svg class="text-gray-800 dark:text-white mx-auto" width="90" height="90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g id="HOUSE-34" data-name="HOUSE"><path d="M63,51H58.91V49.81a3.58,3.58,0,0,0,2.77-3.52c0-.1-.81-10-3.5-10s-3.5,9.94-3.5,10a3.58,3.58,0,0,0,2.77,3.52V51h-7V33.93l3.15,3.73c.83,1,2.3-.37,1.46-1.32l-26.18-31A1,1,0,0,0,28.14,5a1.08,1.08,0,0,0-.72.31L17.6,16H4.85a1,1,0,0,0-1,1V51H1a1,1,0,0,0,0,2H63A1,1,0,0,0,63,51Zm-6.89-4.71c0-1.85,1.15-7.65,2-8.49.89.84,2,6.64,2,8.49a2.1,2.1,0,0,1-1.32,2c0-.61.25-2-.73-2s-.69,1.39-.73,2A2.11,2.11,0,0,1,56.14,46.29ZM48.48,33V51H34.91V33ZM28.09,7.49,48,31H25.21V17a1,1,0,0,0-1-1h-4ZM5.82,18H23.27V51H21.33V23a1,1,0,0,0-1-1H11.64a1,1,0,0,0-1,1V51H5.82ZM19.39,42H12.61V24h6.78Zm-6.78,9V44h6.78v7Zm12.6,0V33H33V51Z"></path></g></svg>   
+                                </div>
+                                <div class="relative z-[1] serviceText">
+                                    <h3 class="text-[20px] font-semibold leading-tight py-4">
+                                        <a class="font-semibold" href="contract-services-civil-construction-site.html">
+                                            Residential Development
+                                        </a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem eius illum sequi deleniti natus, libero nemo,</p>
+                                </div>                             
+                                <div class="overlay pt-[25px]">
+                                    <div class="service-card-btn">
+                                        <a class="bg-[#1a191d] text-white px-8 py-2 font-semibold rounded" href="residential-development.html">Know More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                    </div>
+                </div>
+          </section>
+          <section class="py-6 lg:py-12 my-6 lg:my-12 bg-slate-100 relative z-[1] overflow-hidden">
+                <div class="container mx-auto px-3">
+                    <div class="flex flex-wrap">
+                        <div class="w-full md:w-[50%] flex justify-center flex-col">
+                            <div class="relative">
+                                <p class="font-semibold text-[23px] tracking-widest">About Us</p>
+                                <h3 class="font-bold text-[30px] lg:text-[50px] leading-tight">Nevigating Your<br class="hidden lg:block"> Real Estate Journey</h3>
+                                <p class="text-[15px]">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, perferendis. Repellat corrupti nesciunt accusamus maiores aspernatur, magnam saepe ut perferendis vitae voluptatem hic inventore ducimus in facere et itaque. Harum!</p>
+                                <button class="button button--hyperion my-8 py-0 px-0 btn-2 hover:text-black">
+                                    <a class="block w-full px-10 py-3" href="about.html">
+                                        <span class="font-[400]">Our Project</span>
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="absolute -top-20 left-0 z-[-1]">
+                                <img class="w-[1000px] opacity-[.050]" src="./assets/img/city-civil-planning-real-estate-development.png" alt="">
+                            </div>
+                        </div>
+                        <div class="w-full md:w-[50%]">
+                            <div class="relative">
+                                <img class="w-[90%] lg:w-[75%] xl:w-[65%] md:ms-auto" src="./assets/img/5785.jpg" alt="">
+                                <div class="absolute top-[75%] right-[40%] md:-left-[50%] lg:-left-14 bg-[#fff] w-[265px] px-6 py-4 rounded-[15px] shadow-lg" style="transform: translate(50% ,-50%);">
+                                    <h4 class="font-bold">Lorem ipsum dolor</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          </section>
+
+          <section class="pb-8 lg:pb-12">
+            <div class="container mx-auto px-3">
+                <div>
+                    <p class="font-semibold text-[23px] tracking-widest">Our latest projects</p>
+                    <h3 class="font-bold text-[25px] lg:text-[50px] leading-tight">Transform Your Home In <br class="hidden lg:block">Three Easy Steps</h3>
+                </div>
+                <div class="mt-3 lg:mt-10">
+                    <div class="splide" id="projects" aria-label="projects">
+                        <div class="splide__track">
+                              <ul class="splide__list">
+                                  <li class="splide__slide">
+                                    <div class="mx-2">
+                                        <div class="py-3 flex gap-x-2 items-center overflow-hidden textNo">
+                                            <span class="bg-[#FFF] border border-slate-300 text-[#000] text-[25px] font-semibold px-4 py-2 rounded-lg">01</span>
+        
+                                        </div>
+                                        <div class="mb-3.5">
+                                            <h4 class="font-semibold text-[30px] leading-tight">Consultation & Concept</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus temporibus nihil esse voluptatum possimus.</p>
+                                        </div>
+                                        <div>
+                                            <img class="rounded-lg" src="./assets/img/138180.jpg" alt="">
+                                        </div>
+                                    </div>
+                                  </li>
+                                  <li class="splide__slide">
+                                    <div class="mx-2">
+                                        <div class="py-3 flex gap-x-2 items-center overflow-hidden textNo">
+                                            <span class="bg-[#FFF] border border-slate-300 text-[#000] text-[25px] font-semibold px-4 py-2 rounded-lg">02</span>
+        
+                                        </div>
+                                        <div class="mb-3.5">
+                                            <h4 class="font-semibold text-[30px] leading-tight">Consultation & Concept</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus temporibus nihil esse voluptatum possimus.</p>
+                                        </div>
+                                        <div>
+                                            <img class="rounded-lg" src="./assets/img/138180.jpg" alt="">
+                                        </div>
+                                    </div>
+                                  </li>
+                                  <li class="splide__slide">
+                                    <div class="mx-2">
+                                        <div class="py-3 flex gap-x-2 items-center overflow-hidden textNo">
+                                            <span class="bg-[#FFF] border border-slate-300 text-[#000] text-[25px] font-semibold px-4 py-2 rounded-lg">03</span>
+        
+                                        </div>
+                                        <div class="mb-3.5">
+                                            <h4 class="font-semibold text-[30px] leading-tight">Consultation & Concept</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus temporibus nihil esse voluptatum possimus.</p>
+                                        </div>
+                                        <div>
+                                            <img class="rounded-lg" src="./assets/img/138180.jpg" alt="">
+                                        </div>
+                                    </div>
+                                  </li>
+                                  <li class="splide__slide">
+                                    <div class="mx-2">
+                                        <div class="py-3 flex gap-x-2 items-center overflow-hidden textNo">
+                                            <span class="bg-[#FFF] border border-slate-300 text-[#000] text-[25px] font-semibold px-4 py-2 rounded-lg">04</span>
+        
+                                        </div>
+                                        <div class="mb-3.5">
+                                            <h4 class="font-semibold text-[30px] leading-tight">Consultation & Concept</h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus temporibus nihil esse voluptatum possimus.</p>
+                                        </div>
+                                        <div>
+                                            <img class="rounded-lg" src="./assets/img/138180.jpg" alt="">
+                                        </div>
+                                    </div>
+                                  </li>
+                              </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </section>
+          <section class="pb-6 lg:pb-12">
+            <div class="container mx-auto px-3">
+                <h3 class="text-center font-bold text-[30px] lg:text-[50px] leading-tight">Our Team</h3>
+                <p class="text-center max-w-full w-[800px] mx-auto mt-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, quaerat, iure aliquid nulla illum neque nam incidunt saepe nemo culpa sequi officiis, animi qui. Tempora dolore corporis eius dolores architecto?</p>
+            </div>
+            <div class="mt-6">
+                <div class="splide" id="team" aria-label="projects">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide px-2">
+                                <div class="relative">
+                                    <img class="rounded-lg" src="./assets/img/team/team-1.webp" alt="">
+                                    <div class="absolute bottom-0 left-0 z-[1] bg-[#00000097] text-white w-[98%] py-2 rounded-bl-lg rounded-br-lg">
+                                        <h4 class="font-semibold text-center">Mr. Amit Kumar</h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide px-2">
+                                <div class="relative">
+                                    <img class="rounded-lg" src="./assets/img/team/team-2.webp" alt="">
+                                    <div class="absolute bottom-0 left-0 z-[1] bg-[#00000097] text-white w-[98%] py-2 rounded-bl-lg rounded-br-lg">
+                                        <h4 class="font-semibold text-center">Mr. Amit Kumar</h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide px-2">
+                                <div class="relative">
+                                    <img class="rounded-lg" src="./assets/img/team/team-3.webp" alt="">
+                                    <div class="absolute bottom-0 left-0 z-[1] bg-[#00000097] text-white w-[98%] py-2 rounded-bl-lg rounded-br-lg">
+                                        <h4 class="font-semibold text-center">Mr. Amit Kumar</h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide px-2">
+                                <div class="relative">
+                                    <img class="rounded-lg" src="./assets/img/team/team-4.webp" alt="">
+                                    <div class="absolute bottom-0 left-0 z-[1] bg-[#00000097] text-white w-[98%] py-2 rounded-bl-lg rounded-br-lg">
+                                        <h4 class="font-semibold text-center">Mr. Amit Kumar</h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide px-2">
+                                <div class="relative">
+                                    <img class="rounded-lg" src="./assets/img/team/team-5.webp" alt="">
+                                    <div class="absolute bottom-0 left-0 z-[1] bg-[#00000097] text-white w-[98%] py-2 rounded-bl-lg rounded-br-lg">
+                                        <h4 class="font-semibold text-center">Mr. Amit Kumar</h4>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+          </section>
+    </main>
+    <footer class="bg-[#1a191d] pt-6 md:pt-12 pb-6">
+        <div class="container mx-auto px-3">
+            <div class="flex flex-wrap gap-y-4">
+                <div class="w-full lg:w-[25%] px-1.5">
+                    <div>
+                        <svg id="logo-16" width="109" height="43" viewBox="0 0 109 43" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M64.9315 11.4284C62.1883 8.6852 58.9316 6.5091 55.3475 5.0245C51.7633 3.5399 47.9219 2.7758 44.0424 2.7758C40.1629 2.7758 36.3215 3.5399 32.7373 5.0245C29.1532 6.5091 25.8965 8.6852 23.1533 11.4284L44.0424 32.3174L64.9315 11.4284Z" class="ccompli1" fill="#FFD200"></path> <path d="M44.0686 32.3475C46.8118 35.0907 50.0684 37.2667 53.6526 38.7513C57.2367 40.2359 61.0782 41 64.9577 41C68.837 41 72.679 40.2359 76.263 38.7513C79.847 37.2667 83.104 35.0907 85.847 32.3475L64.9577 11.4584L44.0686 32.3475Z" class="ccompli2" fill="#06E07F"></path> <path d="M44.017 32.3429C41.2738 35.0861 38.0171 37.2621 34.433 38.7467C30.8488 40.2313 27.0074 40.9954 23.1279 40.9954C19.2484 40.9954 15.407 40.2313 11.8228 38.7467C8.2387 37.2621 4.982 35.0861 2.2388 32.3429L23.1279 11.4538L44.017 32.3429Z" class="ccustom" fill="#E3073C"></path> <path d="M64.9831 11.433C67.726 8.6898 70.983 6.5138 74.567 5.0292C78.151 3.5446 81.993 2.7805 85.872 2.7805C89.752 2.7805 93.593 3.5446 97.177 5.0292C100.761 6.5138 104.018 8.6898 106.761 11.433L85.872 32.3221L64.9831 11.433Z" class="ccustom" fill="#1F84EF"></path> </svg>
+                    </div>
+                    <div class="py-3">
+                        <p class="text-white">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi quia rem commodi ipsam dicta autem.
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 w-[200px]">
+                        <div>
+                            <a class="text-white border border-slate-300 w-full block p-[8px_8px] rounded" href="#">
+                                <svg class="w-6 h-6 text-white dark:text-white mx-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z" clip-rule="evenodd"/>
+                                </svg>                                  
+                            </a>
+                        </div>
+                        <div>
+                            <a class="text-white border border-slate-300 w-full block p-[8px_8px] rounded" href="#">
+                                <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" viewBox="0 0 24 24">
+                                    <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+                                </svg>                                  
+                            </a>
+                        </div>
+                        <div>
+                            <a class="text-white border border-slate-300 w-full block p-[8px_8px] rounded" href="#">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                                    <path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"/>
+                                </svg>                                  
+                            </a>
+                        </div>
+                        <div>
+                            <a class="text-white border border-slate-300 w-full block p-[8px_8px] rounded" href="#">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clip-rule="evenodd"/>
+                                </svg>                                  
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-[25%] px-1.5">
+                    <h3 class="text-white font-semibold text-[25px]"><span class="underline underline-offset-8 decoration-2">Our</span> Services</h3>
+                    <div class="mt-5">
+                        <div class="mb-3 flex items-baseline gap-2">
+                            <span class="text-white text-[13px]">&rarr;</span>
+                            <a class="text-white text-[15px]" href="#">Contract service for Civil<br> Construction Sites</a>
+                        </div>
+                        <div class="mb-3 flex items-baseline gap-2">
+                            <span class="text-white text-[13px]">&rarr;</span>
+                            <a class="text-white text-[15px]" href="#">Mechanical Infrastructure</a>
+                        </div>
+                        <div class="mb-3 flex items-baseline gap-2">
+                            <span class="text-white text-[13px]">&rarr;</span>
+                            <a class="text-white text-[15px]" href="#">Warehouse Development</a>
+                        </div>
+                        <div class="mb-3 flex items-baseline gap-2">
+                            <span class="text-white text-[13px]">&rarr;</span>
+                            <a class="text-white text-[15px]" href="#">Residential Development</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-[25%] px-1.5">
+                    <h3 class="text-white font-semibold text-[25px]"><span class="underline underline-offset-8 decoration-2">Corporate</span> Office</h3>
+                    <div class="mt-5">
+                        <div class="flex items-center gap-2 mt-3">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd"/>
+                            </svg>
+                            <p class="text-white">4 Prafulla Sarkar street, 2nd Floor, Kolkata</p>    
+                        </div>
+                        <div class="flex items-center gap-2 mt-3">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                                <path d="M7.978 4a2.553 2.553 0 0 0-1.926.877C4.233 6.7 3.699 8.751 4.153 10.814c.44 1.995 1.778 3.893 3.456 5.572 1.68 1.679 3.577 3.018 5.57 3.459 2.062.456 4.115-.073 5.94-1.885a2.556 2.556 0 0 0 .001-3.861l-1.21-1.21a2.689 2.689 0 0 0-3.802 0l-.617.618a.806.806 0 0 1-1.14 0l-1.854-1.855a.807.807 0 0 1 0-1.14l.618-.62a2.692 2.692 0 0 0 0-3.803l-1.21-1.211A2.555 2.555 0 0 0 7.978 4Z"/>
+                            </svg>
+                            <a href="tel:+919830868898" class="text-white">+91 98308 68898</a>    
+                        </div>
+                        <div class="flex items-center gap-2 mt-3">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                                <path d="M7.978 4a2.553 2.553 0 0 0-1.926.877C4.233 6.7 3.699 8.751 4.153 10.814c.44 1.995 1.778 3.893 3.456 5.572 1.68 1.679 3.577 3.018 5.57 3.459 2.062.456 4.115-.073 5.94-1.885a2.556 2.556 0 0 0 .001-3.861l-1.21-1.21a2.689 2.689 0 0 0-3.802 0l-.617.618a.806.806 0 0 1-1.14 0l-1.854-1.855a.807.807 0 0 1 0-1.14l.618-.62a2.692 2.692 0 0 0 0-3.803l-1.21-1.211A2.555 2.555 0 0 0 7.978 4Z"/>
+                            </svg>
+                            <a href="tel:+919830291234" class="text-white">+91 98302 91234</a>    
+                        </div>
+                        <div class="flex items-center gap-2 mt-3">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                                <path d="M17 6h-2V5h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2h-.541A5.965 5.965 0 0 1 14 10v4a1 1 0 1 1-2 0v-4c0-2.206-1.794-4-4-4-.075 0-.148.012-.22.028C7.686 6.022 7.596 6 7.5 6A4.505 4.505 0 0 0 3 10.5V16a1 1 0 0 0 1 1h7v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3h5a1 1 0 0 0 1-1v-6c0-2.206-1.794-4-4-4Zm-9 8.5H7a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2Z"/>
+                              </svg>                              
+                            <a href="mailto:info@uzify.in" class="text-white">info@uzify.in</a>    
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-[25%] px-1.5">
+                    <h3 class="text-white font-semibold text-[25px]"><span class="underline underline-offset-8 decoration-2">Registered</span> Office</h3>
+                    <div class="mt-5">
+                        <div class="flex items-center gap-2 mt-3">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd"/>
+                            </svg>
+                            <p class="text-white">75C, Parkstreet, 5th Floor, Kolkata - 700016</p>    
+                        </div>
+                        <div class="flex items-center gap-2 mt-3">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                                <path d="M7.978 4a2.553 2.553 0 0 0-1.926.877C4.233 6.7 3.699 8.751 4.153 10.814c.44 1.995 1.778 3.893 3.456 5.572 1.68 1.679 3.577 3.018 5.57 3.459 2.062.456 4.115-.073 5.94-1.885a2.556 2.556 0 0 0 .001-3.861l-1.21-1.21a2.689 2.689 0 0 0-3.802 0l-.617.618a.806.806 0 0 1-1.14 0l-1.854-1.855a.807.807 0 0 1 0-1.14l.618-.62a2.692 2.692 0 0 0 0-3.803l-1.21-1.211A2.555 2.555 0 0 0 7.978 4Z"/>
+                            </svg>
+                            <a href="tel:+919883707070" class="text-white">+91 98837 07070</a>    
+                        </div>
+                        <div class="flex items-center gap-2 mt-3">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                                <path d="M17 6h-2V5h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2h-.541A5.965 5.965 0 0 1 14 10v4a1 1 0 1 1-2 0v-4c0-2.206-1.794-4-4-4-.075 0-.148.012-.22.028C7.686 6.022 7.596 6 7.5 6A4.505 4.505 0 0 0 3 10.5V16a1 1 0 0 0 1 1h7v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3h5a1 1 0 0 0 1-1v-6c0-2.206-1.794-4-4-4Zm-9 8.5H7a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2Z"/>
+                              </svg>                              
+                            <a href="mailto:info@uzify.in" class="text-white">info@uzify.in</a>    
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <hr class="opacity-30 mt-6">
+            <div class="text-center text-[14px] text-white mt-6">
+                &copy; <script>document.write(new Date().getFullYear())</script> Uzify All Rights Reserve  <a class="text-[#b1b1b1]" href="#">- Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+    <script src="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+    "></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js
+    "></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/splide.js"></script>
+    <script src="./assets/js/custom.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
