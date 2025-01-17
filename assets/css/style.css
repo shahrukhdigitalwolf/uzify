@@ -67,7 +67,7 @@ p{
     transform: translate(-18%, -50%);
     width: 132px;
     height: 60px;
-    z-index: 999;
+    z-index: 1;
 }
 .banner-arrow{
     background: transparent;
